@@ -1,0 +1,33 @@
+{
+    "name": "lenal/seo",
+    "description": "SEO",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Nazarian Anna",
+            "email": "a.nazaryan@lenal.biz"
+        }
+    ],
+    "require": {
+        "php": ">=7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "lenal\\seo\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "lenal\\seo\\SEOServiceProvider"
+            ],
+            "aliases": {
+                "seo": "lenal\\seo\\Facades"
+            }
+        }
+    }
+}

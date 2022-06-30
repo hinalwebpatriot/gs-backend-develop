@@ -1,0 +1,18 @@
+version: "3.3"
+services:
+  sphinx:
+    image: macbre/sphinxsearch:3.3.1
+    ports:
+    - "36307:36307" 
+    volumes:
+    - ./sphinx_data:/opt/sphinx/index  
+    - ./sphinx.conf:/opt/sphinx/conf/sphinx.conf  
+    restart: 
+       unless-stopped
+    networks:
+      - diamond
+      
+networks:
+  diamond:
+    driver: bridge
+

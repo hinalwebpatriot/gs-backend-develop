@@ -1,0 +1,30 @@
+{
+    "name": "lenal/promo_registration",
+    "description": "promo_registration",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Peiko",
+            "email": "peiko.vitaly.p@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "lenal\\landings\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "lenal\\promo_registration\\PromoRegistrationProvider"
+            ]
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "name": "lenal/sitemap",
+    "description": "sitemap",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Stadnyk Yevhenii",
+            "email": "e.stadnik@lenal.biz"
+        }
+    ],
+    "require": {
+        "php": ">=7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "lenal\\subscribe\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "lenal\\sitemap\\SitemapServiceProvider"
+            ],
+            "aliases": {
+                "subscribe": "lenal\\sitemap\\Facades"
+            }
+        }
+    }
+}

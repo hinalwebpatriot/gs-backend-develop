@@ -1,0 +1,33 @@
+{
+    "name": "lenal/main-slider",
+    "description": "main slider",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Artyem Pelikhov",
+            "email": "a.pelikhov@lenal.biz"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "lenal\\MainSlider\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "lenal\\MainSlider\\MainSliderServiceProvider"
+            ],
+            "aliases": {
+                "MainSlider": "lenal\\MainSlider\\Facades"
+            }
+        }
+    }
+}

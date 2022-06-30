@@ -1,0 +1,33 @@
+{
+    "name": "lenal/margin-calculate",
+    "description": "margin calculate",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Artyem Pelikhov",
+            "email": "a.pelikhov@lenal.biz"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "lenal\\MarginCalculate\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "lenal\\MarginCalculate\\MarginCalculateServiceProvider"
+            ],
+            "aliases": {
+                "MarginCalculate": "lenal\\MarginCalculate\\Facades"
+            }
+        }
+    }
+}

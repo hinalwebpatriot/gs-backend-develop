@@ -1,0 +1,33 @@
+{
+    "name": "lenal/app-settings",
+    "description": "locales, currency, locations etc.",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Nazarian Anna",
+            "email": "a.nazaryan@lenal.biz"
+        }
+    ],
+    "require": {
+        "php": ">=7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "lenal\\AppSettings\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "lenal\\AppSettings\\AppSettingsServiceProvider"
+            ],
+            "aliases": {
+                "AppSettings": "lenal\\AppSettings\\Facades"
+            }
+        }
+    }
+}

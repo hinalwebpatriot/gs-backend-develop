@@ -1,0 +1,74 @@
+version: "3.3"
+services:
+  frontend:
+    image: registry.gitlab.com/gsdiamondscore/frontend:0.0.1
+    ports:
+          - "803:3000"
+    volumes:
+        - './ecosystem.config.js:/opt/app/ecosystem.config.js'
+    networks:
+      - diamond
+
+  backend:
+    # image: registry.gitlab.com/gsdiamondscore/backend:0.0.2
+    restart: unless-stopped
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - "./:/var/www/html/"
+      - './local_env:/var/www/html/.env'
+      - './back_nginx.conf:/etc/nginx/sites-enabled/default.conf'
+    ports:
+          - "801:80"
+    networks:
+      - diamond
+
+  import:
+    # image: registry.gitlab.com/gsdiamondscore/import:0.0.1
+    restart: unless-stopped
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - "./:/var/www/html/"      
+      - './local_env:/var/www/html/.env'
+    ports:
+          - "802:80"
+    networks:
+      - diamond
+       
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test_db
+    volumes:
+      - '/data/gsdevelop.sql:/tmp/gsdevelop.sql'
+    ports:
+      - 3308:3306        
+    networks:
+      - diamond
+
+  redis:
+    image: 'bitnami/redis:latest'
+    ports:
+      - '6379'
+    environment:
+       REDIS_PASSWORD: pass
+    networks:
+      - diamond
+
+  sphinx:
+    image: macbre/sphinxsearch:3.3.1
+    ports:
+    - "127.0.0.1:36307:36307" # bind to local interface only!
+  #    volumes:
+  #    - ./data:/opt/sphinx/index  # directory where sphinx will store index data
+  #  - ./sphinx.conf:/opt/sphinx/conf/sphinx.conf  # SphinxSE configuration file
+    mem_limit: 256m # match indexer.value from sphinx.conf
+
+networks:
+  diamond:
+    driver: bridge

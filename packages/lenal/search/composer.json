@@ -1,0 +1,35 @@
+{
+    "name": "lenal/search",
+    "description": "Algolia search api",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Artyem Pelikhov",
+            "email": "a.pelikhov@lenal.biz"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "laravel/scout": "^7.1",
+        "algolia/algoliasearch-client-php": "^2.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "lenal\\search\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "lenal\\search\\SearchServiceProvider"
+            ],
+            "aliases": {
+                "Search": "lenal\\search\\Facades"
+            }
+        }
+    }
+}

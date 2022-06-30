@@ -1,0 +1,47 @@
+.swal-carat-range-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  & .swal-carat-divider {
+    font-size: 1.875em;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  & .swal2-input {
+    max-width: 150px;
+  }
+}
+
+.margins-card {
+  overflow: auto;
+}
+
+.margin-value-item {
+  max-width: 100px;
+  position: relative;
+  text-align: center;
+
+  &:hover .margin-value-item-controls {
+    display: inline-flex;
+  }
+
+  & .form-input {
+    max-width: 100%;
+  }
+}
+
+.margin-value-item-controls {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  z-index: 5;
+
+  & svg {
+    width: 20px;
+    height: 20px;
+  }
+}

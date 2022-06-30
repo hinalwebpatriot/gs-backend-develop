@@ -1,0 +1,22 @@
+FROM richarvey/nginx-php-fpm:1.10.0
+
+ENV PHP_MEM_LIMIT=512
+ENV SKIP_COMPOSER=1
+
+ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
+ADD auth.json /root/.composer/auth.json
+
+RUN curl -sS https://getcomposer.org/installer -o composer-setup.php && \
+    php composer-setup.php --install-dir=/usr/local/bin --filename=composer && \
+    rm -rf composer-setup.php && \
+    chmod +x /usr/local/bin/install-php-extensions && sync && \
+    install-php-extensions imagick && \
+    docker-php-ext-install pcntl && \
+    apk update && \
+    apk add mysql-client && \
+    rm -f /var/cache/apk/* 
+
+COPY . /var/www/html/
+
+RUN  cd /var/www/html/ && composer install || true \
+     && chown -R nginx:nginx /var/www/html/* 

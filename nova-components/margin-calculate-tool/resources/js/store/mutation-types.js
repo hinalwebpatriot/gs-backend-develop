@@ -1,0 +1,12 @@
+export const UPDATE_BASE_LOAD_STATE = 'base-load-state';
+export const UPDATE_MARGIN_QUEUE = 'update-margin-queue';
+export const REMOVE_FIRST_FROM_MARGIN_QUEUE = 'remove-first-from-margin-queue';
+export const CLEAR_MARGIN_QUEUE = 'clear-margin-queue';
+export const ADD_ERROR = 'add-error';
+export const CLEAR_ERRORS = 'clear-errors';
+export const UPDATE_DEFAULT_MARGIN = 'update-default-margin';
+export const UPDATE_SELECTED_MARGINS = 'update-selected-margins';
+export const CHANGE_MANUFACTURER = 'change-manufacturer';
+export const CHANGE_CARAT_RANGE = 'change-carat-range';
+export const MARGINS_ARE_SYNCING = 'margins-are-syncing';
+export const SYNC_SELECTED_MARGINS_FROM_DEFAULT = 'sync-selected-margins-from-default';

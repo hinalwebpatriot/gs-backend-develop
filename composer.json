@@ -1,0 +1,154 @@
+{
+  "name": "laravel/laravel",
+  "type": "project",
+  "description": "The Laravel Framework.",
+  "keywords": [
+    "framework",
+    "laravel"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": "^7.4",
+    "ext-json": "*",
+    "64robots/nova-fields": "^0.18.0",
+    "adyen/php-api-library": "^9.0.0",
+    "alexbowers/nova-categorise-resources": "^v1.0.5",
+    "barryvdh/laravel-dompdf": "^v0.9.0",
+    "barryvdh/laravel-elfinder": "^v0.4.7",
+    "benjaminhirsch/nova-slug-field": "^1.2.6",
+    "chris-ware/nova-breadcrumbs": "^2.1.2",
+    "coconutcraig/laravel-postmark": "^v2.10.0",
+    "digital-creative/collapsible-resource-manager": "^v1.2.6",
+    "ebess/advanced-nova-media-library": "^3.4.0",
+    "eminiarts/nova-permissions": "^1.0.6",
+    "eminiarts/nova-tabs": "1.4.1",
+    "epartment/nova-dependency-container": "^1.2.11",
+    "fico7489/laravel-pivot": "^3.0.7",
+    "fideloper/proxy": "^4.4.1",
+    "firebase/php-jwt": "^5.2",
+    "foolz/sphinxql-query-builder": "^2.1.0",
+    "fourstacks/nova-repeatable-fields": "^v1.3.0",
+    "fruitcake/laravel-cors": "^3.0",
+    "gsd/margin-calc-nova-tool": "*",
+    "hubspot/api-client": "^3.1.0",
+    "infinety-es/nova-filemanager": "^2.8.3",
+    "jfeid/nova-google-maps": "^v1.1",
+    "laravel-notification-channels/telegram": "^0.5",
+    "laravel/framework": "^v8.26.1",
+    "laravel/nova": "^3.0",
+    "laravel/passport": "^v10.1.0",
+    "laravel/scout": "^v8.6.0",
+    "laravel/tinker": "^v2.6.0",
+    "league/flysystem": "1.1.3",
+    "league/flysystem-aws-s3-v3": "^1.0",
+    "lenal/margin-calculate-tool": "*",
+    "maatwebsite/laravel-nova-excel": "^1.2.3",
+    "mrmonat/nova-translatable": "^2.1.0",
+    "ofcold/nova-sortable": "^1.0",
+    "outhebox/nova-hidden-field": "^v1.0.3",
+    "paypal/rest-api-sdk-php": "^1.14.0",
+    "predis/predis": "^v1.1.6",
+    "rtconner/laravel-likeable": "^3.1.0",
+    "sentry/sentry-laravel": "^2.3",
+    "silvanite/novafieldcheckboxes": "^v1.2.2",
+    "spatie/data-transfer-object": "^2.8",
+    "spatie/laravel-medialibrary": "^9.4.2",
+    "spatie/laravel-translatable": "^4.6.0",
+    "timothyasp/nova-color-field": "^1.0.4",
+    "watson/sitemap": "^4.0.1",
+    "waynestate/nova-ckeditor4-field": "^0.7.0"
+  },
+  "require-dev": {
+    "filp/whoops": "^2.0",
+    "fzaninotto/faker": "^1.4",
+    "mockery/mockery": "^1.0",
+    "nunomaduro/collision": "^v5.0",
+    "phpunit/phpunit": "^9.0",
+    "barryvdh/laravel-debugbar": "^v3.5.2"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "dont-discover": []
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "GSD\\": "app/GSD/",
+      "GSD\\Core\\": "app/GSD/Ship/Core/",
+      "lenal\\catalog\\": "packages/lenal/catalog/src",
+      "lenal\\blog\\": "packages/lenal/blog/src",
+      "lenal\\subscribe\\": "packages/lenal/subscribe/src",
+      "lenal\\sitemap\\": "packages/lenal/sitemap/src",
+      "lenal\\banners\\": "packages/lenal/banners/src",
+      "lenal\\auth\\": "packages/lenal/auth/src",
+      "lenal\\static_pages\\": "packages/lenal/static_pages/src",
+      "lenal\\MainSlider\\": "packages/lenal/main-slider/src",
+      "lenal\\seo\\": "packages/lenal/seo/src",
+      "lenal\\ShowRooms\\": "packages/lenal/show-rooms/src",
+      "lenal\\blocks\\": "packages/lenal/blocks/src",
+      "lenal\\MarginCalculate\\": "packages/lenal/margin-calculate/src",
+      "lenal\\social\\": "packages/lenal/social/src",
+      "lenal\\additional_content\\": "packages/lenal/additional_content/src",
+      "lenal\\PriceCalculate\\": "packages/lenal/price-calculate/src",
+      "lenal\\AppSettings\\": "packages/lenal/app-settings/src",
+      "lenal\\reviews\\": "packages/lenal/reviews/src",
+      "lenal\\search\\": "packages/lenal/search/src",
+      "lenal\\offers\\": "packages/lenal/offers/src",
+      "lenal\\landings\\": "packages/lenal/landings/src",
+      "lenal\\promo_registration\\": "packages/lenal/promo_registration/src",
+      "HasManySelectField\\": "nova-components/HasManySelectField/src",
+      "Vpsitua\\HasManySinglePage\\": "nova-components/HasManySinglePage/src"
+    },
+    "classmap": [
+      "database/seeds",
+      "database/factories"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://nova.laravel.com"
+    },
+    {
+      "type": "path",
+      "url": "./nova-components/margin-calculate-tool"
+    },
+    {
+      "type": "path",
+      "url": "./nova-components/HasManySelectField"
+    },
+    {
+      "type": "path",
+      "url": "./nova-components/HasManySinglePage"
+    },
+    {
+      "type": "path",
+      "url": "app/GSD/Libs/NovaTools/MarginCalc"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "post-autoload-dump": [
+      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+      "@php artisan package:discover --ansi"
+    ],
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+      "@php artisan key:generate --ansi"
+    ]
+  }
+}

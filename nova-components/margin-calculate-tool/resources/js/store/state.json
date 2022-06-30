@@ -1,0 +1,26 @@
+{
+  "translation": null,
+  "manufacturers": [],
+  "colors": [],
+  "clarities": [],
+  "defaultMargins": [],
+  "selectedMargins": [],
+  "defaultCaratRanges": [],
+  "selectedCaratRange": null,
+  "marginQueue": null,
+  "marginQueueStatus": "",
+  "selectedManufacturer": null,
+  "marginsAreSyncing": false,
+  "loadedData": {
+    "translation": false,
+    "manufacturers": false,
+    "colors": false,
+    "clarities": false,
+    "defaultMargins": false
+  },
+  "errors": [],
+  "marginShapeTypes": [
+    "round",
+    "other"
+  ]
+}

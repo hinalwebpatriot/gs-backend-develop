@@ -1,0 +1,33 @@
+{
+    "name": "lenal/catalog",
+    "description": "catalog landings, feeds, product pages",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Savchenko Oleksii",
+            "email": "oleksii.savchenko@lenal.biz"
+        }
+    ],
+    "require": {
+        "php": ">=7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "lenal\\catalog\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "lenal\\catalog\\CatalogServiceProvider"
+            ],
+            "aliases": {
+                "catalog": "lenal\\catalog\\Facades"
+            }
+        }
+    }
+}

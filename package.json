@@ -1,0 +1,32 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "build-MainSliderCard": "cd nova-components/MainSliderCard && npm run dev",
+        "build-MainSliderCard-prod": "cd nova-components/MainSliderCard && npm run prod",
+        "build-main-slider-tool": "cd nova-components/MainSliderTool && npm run dev",
+        "build-main-slider-tool-prod": "cd nova-components/MainSliderTool && npm run prod",
+        "build-MarginCalculate": "cd nova-components/MarginCalculate && npm run dev",
+        "build-MarginCalculate-prod": "cd nova-components/MarginCalculate && npm run prod",
+        "build-has-many-single-page": "cd nova-components/HasManySinglePage && npm run dev",
+        "build-has-many-single-page-prod": "cd nova-components/HasManySinglePage && npm run prod",
+        "build-MarginCalc": "cd app/GSD/Libs/NovaTools/MarginCalc && npm run dev",
+        "build-MarginCalc-prod": "cd app/GSD/Libs/NovaTools/MarginCalc && npm run prod"
+    },
+    "devDependencies": {
+        "axios": "^0.18",
+        "bootstrap": "^4.0.0",
+        "cross-env": "^5.1",
+        "jquery": "^3.2",
+        "laravel-mix": "^4.0.12",
+        "lodash": "^4.17.5",
+        "popper.js": "^1.12",
+        "vue": "^2.5.17"
+    }
+}

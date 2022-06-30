@@ -1,0 +1,30 @@
+{
+    "name": "lenal/landings",
+    "description": "landings",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Peiko",
+            "email": "peiko.vitaly.p@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "lenal\\landings\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "lenal\\landings\\LandingsServiceProvider"
+            ]
+        }
+    }
+}
